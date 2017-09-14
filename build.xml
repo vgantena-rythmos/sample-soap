@@ -1,0 +1,22 @@
+<project name="ReactorCX" default="testreport" basedir=".">
+<tstamp>
+	<format property="timestamp" pattern="dd-MM-yyyy-HHmmss"/>
+</tstamp>
+<target name="soapui">
+<exec dir="." executable="C:/Program Files (x86)/SmartBear/SoapUI-5.3.0/bin/testrunner.bat" >
+<!--<arg line="-j -f ${user.dir}\Reports ${user.dir}\Project\RCX_SOAPUI\ReactorCX-SoapUI-soapui-project.xml"/> -->
+<arg line="-j -f ${user.dir}\Reports ${user.dir}\example-soapui-project.xml"/>
+</exec>
+</target>
+<target name="testreport" depends = "soapui">
+<junitreport todir = "${user.dir}\Reports">
+	<fileset dir =  "${user.dir}\Reports">
+		<include name = "TEST-*.xml"/>
+	</fileset>
+	<report todir = "${user.dir}\HTML"
+	styledir = "${user.dir}\apache-ant-1.10.1\etc"
+	format="noframes"></report>
+</junitreport>
+<move file="${user.dir}/HTML/junit-noframes.html" toFile="${user.dir}\HTML\Result-${timestamp}.html"/>
+</target>
+</project>
