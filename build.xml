@@ -14,7 +14,7 @@
 		<include name = "TEST-*.xml"/>
 	</fileset>
 	<report todir = "${user.dir}\HTML"
-	styledir = "${user.dir}\apache-ant-1.10.1\etc"
+	styledir = "C:\apache-ant-1.10.1\etc"
 	format="noframes"></report>
 </junitreport>
 <move file="${user.dir}/HTML/junit-noframes.html" toFile="${user.dir}\HTML\Result-${timestamp}.html"/>
