@@ -1,6 +1,6 @@
 ## Read Me ##
 
-** rcx-api-test automation suite** is build on top of KARATE and CUCUMBER frameworks for running api test cases for real time scenarios without human interaction for faster execution and accurate results.
+```rcx-api-test automation suite``` is build on top of KARATE and CUCUMBER frameworks for running api test cases for real time scenarios without human interaction for faster execution and accurate results.
 
 ### Tools/Software required for setting up ###
 - IntelliJ IDEA / Eclipse.
@@ -58,7 +58,7 @@ src/test/java
 ```
 
 
-### Setting up Jbehave Suite ###
+### Setting up framework suite
 
 - Checkout the code from Git
 	> git clone https://xxxxxxxxxxxx.git
@@ -75,27 +75,27 @@ src/test/java
 
  
 ### Parallel Execution
-Framework can run tests in parallel, and dramatically cut down execution time. This is a 'core' feature and does not depend on JUnit, TestNG or even Maven. Just we need to pass thread cound from command parameter as '-Dthread.count=5'.
+Framework can run tests in parallel, and dramatically cut down execution time. This is a 'core' feature and does not depend on JUnit, TestNG or even Maven. Just we need to pass thread cound from command parameter as `-Dthread.count=5`.
 
  
-### Execution of test cases from command line / IntelliJ IDE###
+### Execution of test cases from command line / IntelliJ IDE
 
-##Execute all test(s)
+#### Execute all test(s)
 mvn clean test
 
-##Tag Level - Execution (will execute only tag specific)
+#### Tag Level - Execution (will execute only tag specific)
 mvn clean test -Dcucumber.options="--tags @smoke"
 
-##Multi-Tag Level - Execution (will execute only tag specific)
+#### Multi-Tag Level - Execution (will execute only tag specific)
 mvn clean test -Dcucumber.options="--tags '@smoke, @regression' "
 
-##Folder Level - Execution (will execute only specific folder of feature(s))
+#### Folder Level - Execution (will execute only specific folder of feature(s))
 mvn clean test -Dcucumber.options="classpath:features/rcx_core/crud_api/basic_crud/members"
 
-##Folder Level With Tags (will execute only specific folder of feature(s) with specific tag)
+#### Folder Level With Tags (will execute only specific folder of feature(s) with specific tag)
 mvn clean test -Dcucumber.options="classpath:features/rcx_core/crud_api/basic_crud/members --tags @regression"
 
-##Folder Level with multi-Tags (will execute only specific folder of feature(s) with specific multi-tag(s))
+#### Folder Level with multi-Tags (will execute only specific folder of feature(s) with specific multi-tag(s))
 mvn clean test -Dcucumber.options="classpath:features/rcx_core/crud_api/basic_crud/members --tags '@smoke, @regression' " 
 
 	  
