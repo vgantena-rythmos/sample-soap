@@ -14,10 +14,9 @@
 ### Folder Structure
 
 
-```
-src/test/java
-    |
-    \-- src
+``
+|
+|----- +src
         |
         +-- features
 			|-- Product
@@ -35,25 +34,25 @@ src/test/java
         |   +-- model_schema_1.json
         |   +-- model_schema_2.json
         |
-		+-- resources
+	+-- resources
         |   |
         |   +-- config.properties
         |   +-- log4j.properties
         |
-		+-- utils
+	+-- utils
         |   |
         |   +-- utils.js
         |   +-- resuable.js
         |
-		+-- runner
+	+-- runner
         |   |
         |   +-- KarateRunnerTest.java
-		|
-		+-- karate-config.js
-		+-- logback-test.xml
-		+-- log4j2.properties
-	|
-	+ pom.xml
+	    |
+	+-- karate-config.js
+	+-- logback-test.xml
+	+-- log4j2.properties
+|
++ pom.xml
 			
 ```
 
